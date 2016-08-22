@@ -12,8 +12,8 @@ func main() {
 		chanRet <- "fin 5"
 	}()
 	go func() {
-		time.Sleep(time.Second * 3)
-		chanRet <- "fin 3"
+		time.Sleep(time.Second * 1)
+		chanRet <- "fin 1"
 	}()
 	for {
 		msg1 := <-chanRet
